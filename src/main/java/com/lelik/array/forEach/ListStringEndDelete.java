@@ -1,4 +1,4 @@
-package com.lelik.array.forEach.ListOfCats;
+package com.lelik.array.forEach;
 
 import java.io.BufferedReader;
 import java.io.IOException;
