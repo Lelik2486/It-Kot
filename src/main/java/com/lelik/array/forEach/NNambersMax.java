@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
 
 public class NNambersMax {
@@ -21,18 +20,13 @@ public class NNambersMax {
         NNambersMax max = new NNambersMax();
         System.out.println(max.getMax(list));
     }
-
-
-
     static void getIntegerList(List<Integer> list, int n) throws IOException {
         for(int i = 0; i < n; ++i) {
             System.out.println("Input number");
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
             list.add(Integer.parseInt(reader.readLine()));
         }
-
     }
-
     int getMax(List<Integer> list) {
         Collections.sort(list);
         int max = list.get(list.size() - 1);
