@@ -1,9 +1,9 @@
 package com.lelik.mapDemo.hashMap;
 
 import java.util.HashMap;
-import java.util.Iterator;
+
 import java.util.Map;
-import java.util.Map.Entry;
+
 
 /*
 Создать коллекцию HashMap<String, String>, занести туда 4 пары строк
@@ -31,34 +31,22 @@ public class MapStringString {
         map.put("Ivan", "Son");
         map.put("Gena", "Son");
         map.put("Lera", "Dauпhter");
-        Iterator i = map.entrySet().iterator();
-
-        while(i.hasNext()) {
-            Entry<String, String> entry = (Entry)i.next();
+        for (Map.Entry<String, String> entry : map.entrySet()){
             System.out.println(entry);
         }
-
         printKeys(map);
         printValues(map);
     }
 
     public static void printKeys(Map<String, String> map) {
-        Iterator i = map.keySet().iterator();
-
-        while(i.hasNext()) {
-            String s = (String)i.next();
+        for (String s : map.keySet()) {
             System.out.println(s);
         }
-
     }
 
     public static void printValues(Map<String, String> map) {
-        Iterator i = map.values().iterator();
-
-        while(i.hasNext()) {
-            String value = (String)i.next();
+        for (String value : map.values()) {
             System.out.println(value);
         }
-
     }
 }
