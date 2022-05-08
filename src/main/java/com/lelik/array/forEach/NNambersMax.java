@@ -19,7 +19,7 @@ public class NNambersMax {
             System.out.println(i);
         }
         NNambersMax max = new NNambersMax();
-        System.out.println(max.getMinimum(list));
+        System.out.println(max.getMax(list));
     }
 
 
@@ -33,9 +33,9 @@ public class NNambersMax {
 
     }
 
-    int getMinimum(List<Integer> list) {
+    int getMax(List<Integer> list) {
         Collections.sort(list);
-        int max = (Integer)list.get(list.size() - 1);
+        int max = list.get(list.size() - 1);
         return max;
     }
 }
