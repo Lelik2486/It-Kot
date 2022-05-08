@@ -7,14 +7,26 @@ public class Human {
     Human father;
     Human mother;
 
-    Human(String name, boolean sex, int age) {
-        this.sex = sex;
+    Human(String name, String s, int age) {
+        if (s == "MEN") {
+            this.sex = true;
+        } else if (s == "WOMEN") {
+            this.sex = false;
+        } else {
+            System.out.println("ERROR");
+        }
         this.name = name;
         this.age = age;
     }
 
-    Human(String name, boolean sex, int age, Human father, Human mother) {
-        this.sex = sex;
+    Human(String name, String s, int age, Human father, Human mother) {
+        if (s == "MEN") {
+            this.sex = true;
+        } else if (s == "WOMEN") {
+            this.sex = false;
+        } else {
+            System.out.println("ERROR");
+        }
         this.name = name;
         this.age = age;
         this.father = father;
